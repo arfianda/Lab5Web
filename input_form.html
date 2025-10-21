@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Input</title>
+</head>
+<body>
+    <form name="inputForm" onsubmit="return validasi()">
+        Nama: <input type="text" name="nama"><br>
+        Email: <input type="text" name="email"><br>
+        <input type="submit" value="Kirim">
+    </form>
+
+    <script>
+        function validasi() {
+            var nama = document.inputForm.nama.value;
+            var email = document.inputForm.email.value;
+            if (nama == "" || email == "") {
+                alert("Nama dan Email tidak boleh kosong!");
+                return false;
+            } else {
+                alert("Data berhasil dikirim!");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

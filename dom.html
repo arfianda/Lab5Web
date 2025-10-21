@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hitung Otomatis</title>
+</head>
+<body>
+    <h3>Pilih Buah:</h3>
+    <input type="checkbox" name="buah" value="5000" onclick="hitungTotal(this)"> Apel (Rp5000)<br>
+    <input type="checkbox" name="buah" value="3000" onclick="hitungTotal(this)"> Jeruk (Rp3000)<br>
+    <input type="checkbox" name="buah" value="7000" onclick="hitungTotal(this)"> Mangga (Rp7000)<br>
+    <p>Total Harga: Rp <span id="total">0</span></p>
+
+    <script>
+        var total = 0;
+        function hitungTotal(checkbox) {
+            if (checkbox.checked) {
+                total += parseInt(checkbox.value);
+            } else {
+                total -= parseInt(checkbox.value);
+            }
+            document.getElementById("total").innerText = total;
+        }
+    </script>
+</body>
+</html>
